@@ -1,0 +1,12 @@
+<%= form_for(game) do |f| %>
+
+  <div>
+    <%= f.label(:letters, "Enter Letters") %><br>
+    <%= f.text_field(:letters) %><br><br>
+  </div>
+
+  <div>
+    <%= f.submit() %>
+  </div>
+
+<% end %>

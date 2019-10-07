@@ -1,0 +1,13 @@
+<h1>Index of Games</h1>
+
+<% @games.each do |game| %>
+  <h2>
+    <%= link_to(game.letters, game_path(game)) %><br>
+    <%= link_to(edit_game_path(game)) do %>
+      <button>edit</button>
+    <% end %>
+    <%= form_for(game, method: "DELETE") do |f| %>
+      <%= f.submit("Delete") %>
+    <% end %>
+  </h2>
+<% end %>
