@@ -1,11 +1,23 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.all
+    #@games = Game.all
+    random_word = Word.where("LENGTH(word) = ?", 6).sample
+    @word_list = Word.create_word_list(random_word.word)
+
+    respond_to do |format|
+      format.html
+      format.json {render json: @word_list}
+    end
   end
 
   def show
     @game = Game.find_by(id: params[:id])
     @word_list = Word.create_word_list(@game.letters)
+
+    respond_to do |format|
+      format.html
+      format.json {render json: @word_list}
+    end
   end
 
   def new
