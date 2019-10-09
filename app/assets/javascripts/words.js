@@ -41,8 +41,8 @@ function loadWords(){
 }
 
 function renderWords(){
-  document.querySelector('.word-list').style.columns = Math.ceil(words.length / 11)
-  document.querySelector('.word-list').style.width = `${Math.ceil(words.length / 11)*150}px`
+  document.querySelector('.word-list').style.columns = Math.ceil(words.length / 15)
+  document.querySelector('.word-list').style.width = `${Math.ceil(words.length / 15)*150}px`
   tiles = new Tile(words[words.length-1])
   document.querySelector('.letters.untyped').innerHTML = tiles.renderUntypedTiles()
   words.forEach(word => {

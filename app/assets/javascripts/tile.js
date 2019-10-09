@@ -47,7 +47,7 @@ class Tile {
     let html = ''
     this.typedTiles.forEach(tile => {
       html += `
-        <div class="tile">
+        <div class="tile-typed">
           ${tile}
         </div>
       `

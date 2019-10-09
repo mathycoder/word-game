@@ -2,7 +2,7 @@
 
 .word-list {
   /* columns: 5; */
-  height: 250px;
+  height: 300px;
   margin: 20px;
 }
 
@@ -52,10 +52,12 @@
 
 .letters-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 700px;
+  grid-template-rows: 50px 80px;
+  width: 100%;
+}
+
+.letters-container h3 {
   margin: 0 auto;
-  padding-right: 250px;
 }
 
 .letters {
@@ -63,23 +65,43 @@
 }
 
 .letters.typed {
-  justify-content: flex-start;
+
 }
 
 .letters.untyped {
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
 }
 
 .tile {
   background-color: rgb(213, 180, 143);
   padding: 15px 20px;
-  margin: 0 10px;
+  margin: 0 6px;
   border: 2px black solid;
   font-size: 30px;
   border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+  height: 35px;
+  width: 20px;
+  text-align: center;
+}
+
+.tile-typed {
+  background-color: rgb(213, 180, 143);
+  padding: 7px 10px;
+  margin: 0 3px;
+  border: 2px green solid;
+  font-size: 15px;
+  border-radius: 3px;
+  height: 20px;
+  width: 12px;
+  text-align: center;
   font-family: 'Raleway', sans-serif;
 }
 
 .letters.typed .tile {
   border: 2px green solid;
+}
+
+.next-round {
+  text-align: center;
 }
