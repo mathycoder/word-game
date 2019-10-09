@@ -11,7 +11,7 @@ class Timer {
   classInterval(){
     if (this.seconds > 0){
       this.seconds--
-      document.querySelector('.timer').innerHTML = `<h1>${this.displayTime()}</h1>`
+      document.querySelector('.timer h1').innerHTML = `${this.displayTime()}`
     } else {
       this.reset()
       if (nextRound === false) { document.querySelector('.next-round').innerHTML = "<h1>Game Over </h1>" }

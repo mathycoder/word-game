@@ -1,5 +1,6 @@
 class Tile {
   constructor(word){
+    this.wordId = word.id
     this.word = word.shuffle()
     this.untypedTiles = this.word.split("")
     this.typedTiles = []
@@ -15,6 +16,11 @@ class Tile {
       this.wordSubmit()
     } else if (event.which === 8 && this.untypedTiles.length < 6) {
       this.untypedTiles.unshift(this.typedTiles.pop())
+    } else if (event.which === 32) {
+      const wordObj = Word.find_by_id(this.wordId)
+      this.word = wordObj.shuffle()
+      this.untypedTiles = this.word.split("")
+      this.typedTiles = []
     }
   }
 
@@ -28,8 +34,8 @@ class Tile {
       el.innerText = word.word
       el.classList.add("revealed")
       el.classList.remove("unrevealed")
-      const newPoints = Number.parseInt(document.querySelector('.points').innerText) + word.word.length
-      document.querySelector('.points').innerHTML = `<h1>${newPoints}</h1>`
+      const newPoints = Number.parseInt(document.querySelector('.points h1').innerText) + word.word.length
+      document.querySelector('.points h1').innerHTML = `${newPoints}`
       if (word.word.length === 6) {
         document.querySelector('.next-round').innerHTML = "<h1>Pass to Next Round!</h1>"
         nextRound = true

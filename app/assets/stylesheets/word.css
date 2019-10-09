@@ -23,11 +23,30 @@
 .timer-points-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+  background-color: wheat;
+  border: 3px black dashed;
+}
+
+.timer-points-container h1 {
+  margin-top: -10px;
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 24px;
+}
+
+.timer-points-container h2 {
+  margin: 5px 0;
+  font-size: 18px;
 }
 
 .title-container {
   display: flex;
   justify-content: space-between;
+  width: 800px;
+  margin: 0 auto;
 }
 
 
