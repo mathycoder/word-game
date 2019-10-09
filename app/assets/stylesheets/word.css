@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:800&display=swap');
+
 .word-list {
-  columns: 5;
-  height: 300px;
+  /* columns: 5; */
+  height: 250px;
   margin: 20px;
 }
 
@@ -26,4 +28,39 @@
 .title-container {
   display: flex;
   justify-content: space-between;
+}
+
+
+.letters-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 700px;
+  margin: 0 auto;
+  padding-right: 250px;
+}
+
+.letters {
+  display: flex;
+}
+
+.letters.typed {
+  justify-content: flex-start;
+}
+
+.letters.untyped {
+  justify-content: flex-end;
+}
+
+.tile {
+  background-color: rgb(213, 180, 143);
+  padding: 15px 20px;
+  margin: 0 10px;
+  border: 2px black solid;
+  font-size: 30px;
+  border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.letters.typed .tile {
+  border: 2px green solid;
 }
