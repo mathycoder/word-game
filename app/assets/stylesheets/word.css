@@ -1,4 +1,29 @@
 .word-list {
-  columns: 4;
+  columns: 5;
   height: 300px;
+  margin: 20px;
+}
+
+.word-list .revealed {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  color: green;
+}
+
+.word-list .missed {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  color: red;
+}
+
+.timer-points-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
 }

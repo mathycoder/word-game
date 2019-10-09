@@ -10,6 +10,10 @@ class Word {
     return words.find(word => word.word === searchWord)
   }
 
+  static find_by_id(id){
+    return words.find(word => word.id === id)
+  }
+
   wordHidden(){
     let hidden = ''
     for (let i=1; i<= this.word.length; i++){
