@@ -1,6 +1,6 @@
 class Timer {
   constructor(){
-    this.seconds = 61
+    this.seconds = 181
     this.interval = setInterval(this.classInterval.bind(this), 1000)
   }
 

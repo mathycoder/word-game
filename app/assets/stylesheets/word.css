@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:800&display=swap');
 
 .word-list {
-  /* columns: 5; */
-  height: 300px;
+  height: 250px;
   margin: 20px;
 }
 
@@ -65,11 +64,16 @@
 }
 
 .letters.typed {
-
 }
 
 .letters.untyped {
-  /* justify-content: flex-end; */
+  padding-top: 10px;
+  padding-left: 30px;
+  background-image: url('word-rack.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 100px;
 }
 
 .tile {
@@ -104,4 +108,24 @@
 
 .next-round {
   text-align: center;
+}
+
+.loading {
+  height: 200px;
+  width: 200px;
+  background-image: url('loading-ring.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: rotation 3s infinite linear;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }

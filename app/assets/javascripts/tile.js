@@ -37,7 +37,8 @@ class Tile {
       const newPoints = Number.parseInt(document.querySelector('.points h1').innerText) + word.word.length
       document.querySelector('.points h1').innerHTML = `${newPoints}`
       if (word.word.length === 6) {
-        document.querySelector('.next-round').innerHTML = "<h1>Pass to Next Round!</h1>"
+        document.querySelector('.next-round').innerHTML = '<h1>Pass to Next Round!</h1>'
+        document.querySelector('.reset').innerText = "Next Round"
         nextRound = true
       }
     }

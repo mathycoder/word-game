@@ -4,6 +4,7 @@ let tiles
 let nextRound = false
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector('.word-list').innerHTML = "<div class='loading'></div>"
   loadWords()
   document.querySelector('.reset').addEventListener('click', resetGame)
   document.addEventListener('keydown', keyListener)
@@ -17,11 +18,13 @@ function keyListener(event){
 
 function resetGame(){
   this.blur()
+  document.querySelector('.reset').innerText = "Restart"
   if (!nextRound) { document.querySelector('.points h1').innerText = "0" }
   nextRound = false
   document.querySelector('.next-round h1').innerText = ""
   interval.reset()
-  document.querySelector('.word-list').innerHTML = ""
+  document.querySelector('.word-list').style = ""
+  document.querySelector('.word-list').innerHTML = "<div class='loading'></div>"
   document.querySelector('.letters.typed').innerHTML = ""
   document.querySelector('.letters.untyped').innerHTML = ""
   words = []
@@ -41,6 +44,7 @@ function loadWords(){
 }
 
 function renderWords(){
+  document.querySelector('.word-list').innerHTML = ""
   document.querySelector('.word-list').style.columns = Math.ceil(words.length / 15)
   document.querySelector('.word-list').style.width = `${Math.ceil(words.length / 15)*150}px`
   tiles = new Tile(words[words.length-1])
